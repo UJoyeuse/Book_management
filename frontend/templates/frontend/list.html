@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Requests</h2>
+<button type="button" onclick="buildlist()">Request data</button>
+<p id="demo" ></p>
+
+<script>
+function buildlist(){
+    var url='http://127.0.0.1:8000/api/author/'
+    fetch(url)
+    .then((resp) => resp.json())
+    .then(function(data){
+         console.log('Data:',data)
+    })
+}
+</script>
+
+</body>
+</html>
